@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .chat-container {
+            max-width: 500px;
+            margin: 50px auto;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+        .chat-header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        .chat-messages {
+            padding: 20px;
+            height: 300px;
+            overflow-y: auto;
+        }
+        .message {
+            margin-bottom: 10px;
+        }
+        .message.bot {
+            text-align: left;
+        }
+        .message.user {
+            text-align: right;
+        }
+        .message p {
+            background-color: #e5e5ea;
+            border-radius: 5px;
+            padding: 10px;
+            display: inline-block;
+            max-width: 80%;
+        }
+        .message.bot p {
+            background-color: #007bff;
+            color: #fff;
+        }
+        .message.user p {
+            background-color: #4caf50;
+            color: #fff;
+        }
+        .chat-input {
+            display: flex;
+            padding: 10px;
+        }
+        .input-field {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+            font-size: 16px;
+        }
+        .send-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h2>Chatbot</h2>
+        </div>
+        <div class="chat-messages" id="chat-messages">
+            <!-- Chat messages will be added dynamically here -->
+        </div>
+        <div class="chat-input">
+            <input type="text" id="user-input" class="input-field" placeholder="Type your message...">
+            <button id="send-btn" class="send-btn">Send</button>
+        </div>
+    </div>
+
+    <script src="chatbot.js"></script>
+</body>
+</html>
